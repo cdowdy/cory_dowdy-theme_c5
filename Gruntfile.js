@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/jquery.js', 'js/foundation/foundation.js', 'js/foundation/foundation.topbar.js', 'js/foundation/foundation.interchange.js', 'js/vendor/fastclick.js'],
+        src: ['js/foundation/foundation.js', 'js/foundation/foundation.topbar.js', 'js/foundation/foundation.interchange.js', 'js/foundation/foundation.accordion.js', 'js/vendor/fastclick.js'],
         dest: 'min/<%= pkg.name %>.js'
       }
     },
@@ -31,20 +31,23 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'asset_library/images',
+          cwd: 'asset_library/svg_icons',
           src: ['**/*.svg'],
           dest: 'img/',
           ext: '.min.svg'
         }]
       }
     },
-    uncss: {
-      dist: {
-        files: {
-          '/css/main.css': ['/index.html']
-        }
+    grunticon: {
+      myIcons: {
+        files: [{
+          expand: true,
+          cwd: 'asset_library/svg_icons',
+          src: ['*.svg', '*.png'],
+          dest: "grunticons"
+        }]
       }
-    },
+    }
   });
 
   grunt.loadNpmTasks('grunt-svgmin');
@@ -53,8 +56,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-grunticon');
 
 
-  grunt.registerTask('default', ['concat', 'uglify', 'svgmin', 'uncss']);
+  grunt.registerTask('default', ['concat', 'uglify']);
 
 };

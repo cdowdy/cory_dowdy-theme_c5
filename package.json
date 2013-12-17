@@ -30,6 +30,8 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-svgmin": "~0.3.0",
     "grunt-contrib-sass": "~0.6.0",
-    "grunt-uncss": "~0.1.5"
+    "grunt-uncss": "~0.1.5",
+    "grunt-grunticon": "~1.0.0-alpha.4",
+    "grunt-contrib-compass": "~0.7.0"
   }
 }
