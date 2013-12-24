@@ -10,12 +10,10 @@
          <p class="copyright">&copy; <?php print date('Y') . ' ' . SITE; ?></p>
         </div>
         <div class="small-12 large-6 columns">
-          <ul class="footer-links">
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Demos</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <?php
+          $a = new GlobalArea('Footer Navigation');
+          $a->display();
+          ?>
         </div>
       </div>
     </div> 
@@ -26,9 +24,16 @@
 if (!$c->isEditMode()) { ?>
 <script src="<?php echo $this->getThemePath(); ?>/min/CoryDowdy.min.js"></script>
 <script>
-  $(document).foundation();
+  $(document).foundation();$(window).scroll(function(){var a=$(window).scrollTop();if(a>0){$("header").addClass("shadow");}else{$("header").removeClass("shadow");
+}});
 </script>
 <?php } ?>
+<?php if ($c->getCollectionHandle() == 'work'):?>
+<script>
+$(document).ready(function(){$(".image-popup-vertical-fit").magnificPopup({type:"image",closeOnContentClick:true,mainClass:"mfp-img-mobile",image:{verticalFit:true}});
+});
+</script>
+<?php endif; ?>
 <?php Loader::element('footer_required'); ?>
   </body>
 </html>
