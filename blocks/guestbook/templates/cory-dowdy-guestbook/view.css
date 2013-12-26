@@ -1,0 +1,15 @@
+.comments-entry_by{
+	border-style: solid;
+	border-width: 1px;
+	border-color: gainsboro;
+	margin-bottom: 1.25rem;
+	padding: 1.25rem;
+	background: white;
+}
+.comments-posted_by{
+	margin-bottom: 0.188em;
+}
+
+.notice-text{
+	margin-top: -1.250em;
+}
