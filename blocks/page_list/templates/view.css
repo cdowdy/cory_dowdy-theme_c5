@@ -1,0 +1,14 @@
+if ($page >= 2 ) { ?>
+		
+		<div class="large-6 columns">
+		<div class="panel">
+		<h3 class="ccm-page-list-title">
+			<a href="<?php  echo $url ?>" target="<?php  echo $target ?>"><?php  echo $title ?></a>
+		</h3>
+		<h6><?php echo $date ?></h6>
+		<div class="ccm-page-list-description">
+			<?php  echo $description ?>
+		</div>
+		</div>
+	</div>
+<?php } ?>
