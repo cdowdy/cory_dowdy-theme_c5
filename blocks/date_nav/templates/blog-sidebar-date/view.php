@@ -1,6 +1,6 @@
 <?php  
 defined('C5_EXECUTE') or die("Access Denied.");
-
+$v 	  = View::GetInstance();
 global $c;
 $textHelper = Loader::helper("text"); 
 $dateHelper = Loader::helper("date"); 
@@ -106,6 +106,7 @@ if( $controller->flatDisplay )  echo "\t </ul> \r \n";
 if( count($postsByDate)>1 && !$controller->flatDisplay ) echo "</ul> \r \n"; 
 ?>
 </div>
+<hr />
 
 <script type="text/javascript">
 <?php   if($controller->defaultNode=='current_month'){ ?>
