@@ -1,7 +1,6 @@
 theme for corydowdy.com
-=======================
+=======================  
 
+Using Concrete5 5.6.2.1 and Zurb Foundation 5  
 
-not done. just started. I JUST UPLOADED ALL THE THINGS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-based on foundation5 
+------------------------
